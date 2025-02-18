@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    base: '/valoweb/',
     server: {
       proxy: {
         '/valorant-api': {
@@ -18,7 +19,6 @@ export default defineConfig(({ mode }) => {
           secure: false
         }
       }
-    },
-    base: '/'
+    }
   }
 })
