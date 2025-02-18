@@ -14,9 +14,11 @@ export default defineConfig(({ mode }) => {
         '/valorant-api': {
           target: 'https://api.henrikdev.xyz',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/valorant-api/, '')
+          rewrite: (path) => path.replace(/^\/valorant-api/, ''),
+          secure: false
         }
       }
-    }
+    },
+    base: '/'
   }
 })

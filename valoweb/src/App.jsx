@@ -27,6 +27,12 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    document.title = account 
+      ? `Valorant Helper - ${account.name}#${account.tag}` 
+      : 'Valorant Helper';
+  }, [account]);
+
   const getEncouragementMessage = (stats) => {
     if (stats.currentStreak >= 3) {
       if (stats.isWinStreak) {
